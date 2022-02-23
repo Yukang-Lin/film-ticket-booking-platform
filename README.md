@@ -17,7 +17,7 @@ python框架：Flask
 
 ## 四、数据库设计
 
-![ER](E:\我的大学\大二下\数据库课程设计\ER.png)
+![ER](ER.png)
 
 ER图
 
