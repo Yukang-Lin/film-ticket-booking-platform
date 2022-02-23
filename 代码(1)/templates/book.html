@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head  >
+<style type="text/css">
+.header {
+ position:fixed;
+ top:0;
+ z-index:999;
+ width:100%;
+ min-width:1200px;
+ background-color:#fff;
+ border-bottom:1px solid #d8d8d8
+}
+.header .header-inner {
+ width:1200px;
+ margin:0 auto;
+ height:80px
+}
+
+
+.header {
+ position:fixed;
+ top:0;
+ z-index:999;
+ width:100%;
+ min-width:1200px;
+ background-color:#fff;
+ border-bottom:1px solid #d8d8d8
+}
+.header .header-inner {
+ width:1200px;
+ margin:0 auto;
+ height:80px
+}
+
+.header   a {
+background:#f0f0f0;
+padding:20px;
+width: 250px;
+margin: 0 auto;
+text-align:center;
+ display:inline-block;
+ height:80px;
+line-height：80px
+ line-height:80px;
+ width:70px;
+ font-size:18px;
+ color:#333;
+ background-color:#fff;
+text-decoration:none;
+ float:left
+}
+.header  a:hover {
+ color:#6e8efb
+}
+.header  a.active {
+ color:#fff;
+ background-color:#6e8efb
+}
+a.movie{
+display:inline-block;
+line-height:35px;
+ height:35px;
+ width:159px;
+margin-left:-0.5px;
+text-align:center;
+font-size:18px;
+color:#6e8efb;
+background-color:#fff;
+text-decoration:none;
+border:1px solid #d8d8d8;
+}
+a.movie:hover{
+ color:#fff;
+background-color:#6e8efb;
+border-top:1px solid #6e8efb;
+}
+
+</style>
+
+
+<div class="header">
+    <div class="header-inner">
+	<a href="/" class="active">电影</a>
+	<a href="/cinema" >影院</a>
+	<a href="/top" >排行榜</a>
+	 <a href="/login">订单</a>
+    </div>
+</div>
+
+
+
+
+<body style="font-family:微软雅黑">
+<img src="{{b[0]}}" style="position:aboslute;margin-top:200px;"  width="900" height="398.7" ></img>
+<div style="position:absolute;margin-left:925px;margin-top:-400px;"  ><img src="{{c[9]}}"width="219" height="300"/> </div>
+<a  href="/CG"><button style="position:absolute;margin-left:350px;margin-top:530px;width:120px;height:60px;background-color:#6e8efb">购买</button></a>
+<div style="position:absolute;margin-left:925px;margin-top:-50px;" >
+<form >
+<select name="row" style="width:160px;height:30px;">
+{% for i in r %}
+{% if i >0.5 %}
+<option value="{{i}}">{{i}}</option>
+{% endif %}
+{% endfor %}
+</select>
+<font>号可选</font>
+</form>
+</div>
+</body>
+</html>

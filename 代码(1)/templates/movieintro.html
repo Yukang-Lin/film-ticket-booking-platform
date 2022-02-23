@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head  >
+<style type="text/css">
+.header {
+ position:fixed;
+ top:0;
+ z-index:999;
+ width:100%;
+ min-width:1200px;
+ background-color:#fff;
+ border-bottom:1px solid #d8d8d8
+}
+.header .header-inner {
+ width:1200px;
+ margin:0 auto;
+ height:80px
+}
+
+
+.header {
+ position:fixed;
+ top:0;
+ z-index:999;
+ width:100%;
+ min-width:1200px;
+ background-color:#fff;
+ border-bottom:1px solid #d8d8d8
+}
+.header .header-inner {
+ width:1200px;
+ margin:0 auto;
+ height:80px
+}
+
+.header   a {
+background:#f0f0f0;
+padding:20px;
+width: 250px;
+margin: 0 auto;
+text-align:center;
+ display:inline-block;
+ height:80px;
+line-height：80px
+ line-height:80px;
+ width:70px;
+ font-size:18px;
+ color:#333;
+ background-color:#fff;
+text-decoration:none;
+ float:left
+}
+.header  a:hover {
+ color:#6e8efb
+}
+.header  a.active {
+ color:#fff;
+ background-color:#6e8efb
+}
+a.movie{
+display:inline-block;
+line-height:35px;
+ height:35px;
+ width:159px;
+margin-left:-0.5px;
+text-align:center;
+font-size:18px;
+color:#6e8efb;
+background-color:#fff;
+text-decoration:none;
+border:1px solid #d8d8d8;
+}
+a.movie:hover{
+ color:#fff;
+background-color:#6e8efb;
+border-top:1px solid #6e8efb;
+}
+
+button {
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(to bottom, #6e8efb 0%,#a777e3 100%); /* W3C */
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 4px solid #2b8bc6;
+  color: #fbfbfb;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+  font-size: 15px;
+  text-align: left;
+  text-indent: 5px;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+
+/* Just for presentation */  
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+</style>
+
+
+<div class="header">
+    <div class="header-inner">
+	<a href="/" class="active">电影</a>
+	<a href="/cinema" >影院</a>
+	<a href="/top" >排行榜</a>
+	 <a href="/login">订单</a>
+    </div>
+</div>
+
+
+<body style="font-family:微软雅黑">
+ <p>
+<div id="container" style="height:316.25px;width:1000px;margin-left:220px;margin-top:150px;border:1px solid #6e8efb;background:linear-gradient(135deg, #6e8efb, #a777e3);">
+	<img width="230" height="316.25"src="{{ c[9] }}" alt="{{c[1]}}"  stype="margin-left:200;pxposition:relative;"/>
+	<font style="text-align:center;position:absolute;margin-top:10px;margin-left:50px;font-size:45px;font-family:微软雅黑;color:#fff;">{{c[1]}}</font>
+	<font style="text-align:center;position:absolute;margin-top:80px;margin-left:50px;font-size:19px;font-family:微软雅黑;" color="white">{{c[4]}}</font>
+	<font style="text-align:center;position:absolute;margin-top:110px;margin-left:50px;font-size:19px;font-family:微软雅黑;" color="white">{{c[6]}}/{{c[3]}}</font>
+	<font style="text-align:center;position:absolute;margin-top:140px;margin-left:50px;font-size:19px;font-family:微软雅黑;" color="white">{{c[8]}}</font>
+	<font style="text-align:center;position:absolute;margin-top:180px;margin-left:50px;font-size:19px;font-family:微软雅黑;" color="white">领衔主演：{{c[5]}}</font>
+	<font style="text-align:center;position:absolute;margin-top:140px;margin-left:350px;font-size:35px;font-family:微软雅黑;color:#fce157;">{{c[2]}}分</font>
+</div>
+<div style="text-align:center;position:absolute;margin-top:20px;margin-left:260px;font-size:28px;font-family:微软雅黑;color:#a777e3;">剧情简介</div>
+<hr style="height:3px;border:none;border-top:3px groove purple;margin-top:60px;margin-left:245px;opacity: 0.2;width:900px;" /> 
+<div style="text-align:left;margin-top:5px;margin-left:260px;font-size:18px;font-family:微软雅黑;color:#000000;width:840px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{c[10]}}</div>
+<div style="text-align:center;margin-top:20px;margin-left:-875px;padding:0;font-size:28px;font-family:微软雅黑;color:#a777e3;">时间表</div>
+<hr style="height:3px;border:none;border-top:3px groove purple;margin-top:5px;margin-left:245px;opacity: 0.2;width:900px;padding:0;" /> 
+<table style="margin-left:240px;1px solid #6e8efb;padding:0px">
+{% for i in b %}
+      <tr style="height:120px;margin-top:0;">
+        <td  width="450" style="border-bottom-style:inset;font-size:30px;">{{i[0]}}</a></td>
+        <td width="110"  style="border-bottom-style:inset;font-size:30px;">{{i[1]}}</a></td>
+        <td width="240" style="border-bottom-style:inset;font-size:30px;text-align:center">{{i[2]}}</a></td>
+        <td width="110"  style="border-bottom-style:inset;font-size:30px;">{{i[3]}}</a></td>	
+        <td><a href="/book/{{i[4]}}%2f/{{i[5]}}"><button>选座购票</button></a></td>
+      </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
